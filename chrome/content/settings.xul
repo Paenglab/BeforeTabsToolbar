@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<?xml-stylesheet href="chrome://messenger/skin/" type="text/css"?>
+
+<dialog xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
+        title = "Before Tabs Toolbar"
+        id = "BTTPrefs"
+        onload = "onLoad();"
+        ondialogaccept = "savePrefs();">
+
+<script type = "application/x-javascript">
+<![CDATA[
+  var prefs = Components.classes["@mozilla.org/preferences-service;1"]
+              .getService(Components.interfaces.nsIPrefBranch);
+  function savePrefs() {
+    prefs.setBoolPref("extensions.btt.styleButton", document.getElementById("blueButton").checked);
+  }
+  function onLoad() {
+   document.getElementById("blueButton").checked = prefs.getBoolPref("extensions.btt.styleButton");
+  }
+]]>
+</script>
+
+<groupbox>
+  <caption label = "AppButton, when on Before Tabs Toolbar"/>
+  <hbox align="center">
+    <checkbox id="blueButton" label="Make the AppButton blue, when on Before Tabs Toolbar"/>
+  </hbox>
+</groupbox>
+</dialog>

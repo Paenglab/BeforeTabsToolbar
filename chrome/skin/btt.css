@@ -1,0 +1,96 @@
+/*
+ * This Source Code is subject to the terms of the Mozilla Public License
+ * version 2.0 (the "License"). You can obtain a copy of the License at
+ * http://mozilla.org/MPL/2.0/.
+ */
+@import url(chrome://os_special/skin/btt.css);
+
+@namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
+
+@media (-moz-windows-glass) {
+  #before-tab-toolbar .toolbarbutton-1 {
+    list-style-image: url("chrome://messenger/skin/icons/mail-toolbar-inverted.png");
+  }
+}
+
+#before-tab-toolbar {
+  -moz-appearance: none;
+  border: none;
+  -moz-box-ordinal-group: 0;
+}
+
+#before-tab-toolbar[customizing] {
+  min-width: 24px;
+  outline: 1px dotted Highlight;
+  outline-offset: -1px;
+  background: grey;
+}
+
+#messengerWindow[bttStyleButton="true"] > #navigation-toolbox >
+#tabs-toolbar > #before-tab-toolbar > #button-appmenu {
+  -moz-appearance: none;
+  border-radius: 3px;
+  border: 1px solid #444;
+  background-image: linear-gradient(#0095dd, #00539f 95%);
+  box-shadow: 0 1px 0 hsla(205,100%,72%,.2) inset,
+              0 0 2px 1px hsla(205,100%,72%,.25) inset;
+}
+
+#messengerWindow[bttStyleButton="true"] > #navigation-toolbox >
+#tabs-toolbar > #before-tab-toolbar > #button-appmenu:hover:not(:active):not([open]) {
+  background-image: radial-gradient(ellipse farthest-side at center bottom,
+                    hsla(202,100%,85%,.5) 10%, hsla(202,100%,85%,0) 70%),
+                    radial-gradient(ellipse farthest-side at center bottom,
+                    hsla(205,100%,72%,.7), hsla(205,100%,72%,0)),
+                    linear-gradient(hsl(208,98%,34%), hsl(213,87%,20%) 95%);
+  background-size: auto auto;
+  background-position: 0 0;
+  box-shadow: 0 1px 0 hsla(205,100%,72%,.15) inset,
+			  0 0 2px 1px hsla(205,100%,72%,.5) inset,
+			  0 -1px 0 hsla(205,100%,72%,.2) inset;
+}
+
+#messengerWindow[bttStyleButton="true"] > #navigation-toolbox >
+#tabs-toolbar > #before-tab-toolbar > #button-appmenu:hover:active,
+#messengerWindow[bttStyleButton="true"] > #navigation-toolbox >
+#tabs-toolbar > #before-tab-toolbar > #button-appmenu[open] {
+  background-image: linear-gradient(#0075bd, #00337f 95%);
+  box-shadow: 0 2px 3px rgba(0,0,0,.4) inset,
+              0 1px 1px rgba(0,0,0,.2) inset;
+  background-size: auto auto;
+  background-position: 0 0;
+}
+
+#messengerWindow[bttStyleButton="true"] > #navigation-toolbox >
+#tabs-toolbar > #before-tab-toolbar > #button-appmenu > hbox > vbox > .toolbarbutton-icon {
+  display: none;
+}
+
+#messengerWindow[bttStyleButton="true"] > #navigation-toolbox >
+#tabs-toolbar > #before-tab-toolbar > #button-appmenu > hbox > vbox > .toolbarbutton-text {
+  display: -moz-box;
+  color: white;
+  text-shadow: 0 0 1px rgba(0,0,0,.7),
+               0 1px 1.5px rgba(0,0,0,.5);
+  font-weight: bold;
+}
+
+#messengerWindow[bttStyleButton="true"] > #navigation-toolbox >
+#tabs-toolbar > #before-tab-toolbar > #button-appmenu .toolbarbutton-menu-dropmarker {
+  display: -moz-box;
+  list-style-image: url(appmenu-dropmarker.png);
+  width: auto;
+  height: auto;
+  padding: 0;
+  margin: 0;
+  -moz-margin-start: 2px;
+}
+
+@media (-moz-os-version: windows-win8),
+       (-moz-os-version: windows-win10) {
+  #messengerWindow[bttStyleButton="true"] > #navigation-toolbox >
+  #tabs-toolbar > #before-tab-toolbar > #button-appmenu {
+    border-radius: 0;
+    box-shadow: none !important;
+  }
+}

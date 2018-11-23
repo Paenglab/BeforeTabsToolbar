@@ -1,0 +1,8 @@
+content  btt chrome/content/
+skin     btt classic/1.0 chrome/skin/
+overlay  chrome://messenger/content/messenger.xul chrome://btt/content/btt-overlay.xul
+overlay  chrome://messenger/content/mailWindowOverlay.xul chrome://btt/content/btt-AppButton-overlay.xul
+
+skin	os_special	classic/1.0 chrome/os_special/mac/	os=Darwin
+skin	os_special	classic/1.0 chrome/os_special/linux/	os=Linux
+skin	os_special	classic/1.0 chrome/os_special/win/	os=WINNT

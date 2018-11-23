@@ -1,0 +1,64 @@
+#before-tab-toolbar .toolbarbutton-1,
+#before-tab-toolbar .toolbarbutton-menubutton-button,
+#before-tab-toolbar .toolbarbutton-menubutton-dropmarker {
+  margin-top: 0;
+  margin-bottom: -1px;
+  padding: 0 3px !important;
+  border: none;
+  border-radius: 0;
+  background: none;
+  box-shadow: none;
+}
+
+#before-tab-toolbar .toolbarbutton-menubutton-button,
+#before-tab-toolbar .toolbarbutton-menubutton-dropmarker {
+  margin: 0;
+}
+
+#before-tab-toolbar .toolbarbutton-1 > .toolbarbutton-menubutton-dropmarker::before {
+  display: none;
+}
+
+#before-tab-toolbar .toolbarbutton-1:not([disabled]):hover,
+#before-tab-toolbar .toolbarbutton-1:not([disabled])[checked="true"],
+#before-tab-toolbar toolbarbutton[type="menu-button"]:hover >
+                .toolbarbutton-menubutton-dropmarker:not([disabled="true"]) {
+  background-image: linear-gradient(rgba(255, 255, 255, 0),
+                    rgba(255, 255, 255, .5)),
+                    linear-gradient(transparent, rgba(0, 0, 0, .25) 30%),
+                    linear-gradient(transparent, rgba(0, 0, 0, .25) 30%);
+  background-position: 1px -1px, 0 -1px, 100% -1px;
+  background-size: calc(100% - 2px) 100%, 1px 100%, 1px 100%;
+  background-repeat: no-repeat;
+}
+
+#before-tab-toolbar .toolbarbutton-menubutton-button:not([disabled]):hover {
+  background-image: linear-gradient(rgba(255, 255, 255, 0),
+                    rgba(255, 255, 255, .5)),
+                    linear-gradient(transparent, rgba(0, 0, 0, .25) 30%);
+  background-position: 1px -1px, 0 -1px;
+  background-size: calc(100% - 1px) 100%, 1px 100%;
+  background-repeat: no-repeat;
+}
+
+#before-tab-toolbar
+  .toolbarbutton-menubutton-button:not([disabled]):hover:-moz-locale-dir(rtl) {
+  background-position: 1px -1px, 100% -1px;
+}
+
+#messengerWindow[bttStyleButton="true"] > #navigation-toolbox >
+#tabs-toolbar > #before-tab-toolbar #button-appmenu {
+  margin-top: 3px;
+  margin-inline-end: 1px;
+  margin-bottom: 2px;
+  margin-inline-start: 5px;
+  padding: 0 5px !important;
+}
+
+@media (-moz-os-version: windows-win8) {
+  #messengerWindow[darkwindowframe="true"]
+  #before-tab-toolbar:not(:-moz-lwtheme):not(:-moz-window-inactive)
+  .toolbarbutton-1 {
+    list-style-image: url(chrome://messenger/skin/icons/mail-toolbar-inverted.png);
+  }
+}

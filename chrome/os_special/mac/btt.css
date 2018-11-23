@@ -1,0 +1,21 @@
+#messengerWindow[bttStyleButton="true"] > #navigation-toolbox >
+#tabs-toolbar > #before-tab-toolbar #button-appmenu {
+  margin: 4px;
+  -moz-padding-start: 4px;
+}
+
+#messengerWindow[bttStyleButton="true"][tabsintitlebar="true"] > #navigation-toolbox >
+#tabs-toolbar > #before-tab-toolbar #button-appmenu {
+  -moz-margin-start: 8px;
+}
+
+#messengerWindow[bttStyleButton="true"] > #navigation-toolbox >
+#tabs-toolbar > #before-tab-toolbar #button-appmenu > hbox > .toolbarbutton-menu-dropmarker {
+  -moz-margin-end: 2px;
+}
+
+#messengerWindow[bttStyleButton="true"] > #navigation-toolbox >
+#tabs-toolbar > #before-tab-toolbar #button-appmenu .toolbarbutton-menu-dropmarker .dropmarker-icon {
+  width: 9px;
+  height: 7px;
+}

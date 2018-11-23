@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<!DOCTYPE overlay [
+  <!ENTITY % brandDTD SYSTEM "chrome://branding/locale/brand.dtd" > %brandDTD;
+]>
+
+<?xml-stylesheet href="chrome://btt/skin/btt.css" type="text/css"?>
+
+<overlay id="btt-AppButton-overlay" xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+  <toolbarbutton id="button-appmenu"
+                 label="&brandShortName;"/>
+</overlay>

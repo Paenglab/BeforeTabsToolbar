@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<?xml-stylesheet href="chrome://btt/skin/btt.css" type="text/css"?>
+
+<overlay id="btt-overlay" xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+<script type="application/javascript" src="chrome://btt/content/btt.js"></script>
+  <toolbar id="tabs-toolbar">
+     <toolbar id="before-tab-toolbar" toolboxid="mail-toolbox"
+              insertbefore="tabcontainer"
+              context="toolbar-context-menu"
+              customizable="true"
+              mode="icons" defaultmode="icons" lockmode="true"
+              iconsize="small" defaulticonsize="small" lockiconsize="true"
+              defaultset=""/>
+  </toolbar>
+</overlay>
